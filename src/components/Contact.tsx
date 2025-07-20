@@ -112,7 +112,7 @@ const Contact = () => {
               <input type="hidden" name="_subject" value="New Solar Inquiry from Website" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_next" value="http://52.66.244.255:5173/thank-you.html" />
+              <input type="hidden" name="_next" value="https://suncraftpowersolutions.vercel.app/thank-you" />
 
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
