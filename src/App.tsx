@@ -1,22 +1,34 @@
 // src/App.tsx
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ThankYou from './pages/ThankYou';
+
+const Home = () => (
+  <>
+    <Header />
+    <Hero />
+    <About />
+    <Services />
+    <Contact />
+    <Footer />
+  </>
+);
 
 function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Contact />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/thank-you" element={<ThankYou />} />
+      </Routes>
+    </Router>
   );
 }
 
