@@ -1,19 +1,25 @@
-// src/main.tsx
+// src/App.tsx
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './App';
-import ThankYou from './pages/ThankYou'; // move ThankYou here
-import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/thank-you" element={<ThankYou />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
-);
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Services from './components/Services';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+const App: React.FC = () => {
+  return (
+    <>
+      <Header />
+      <Hero />
+      <About />
+      <Services />
+      <Contact />
+      <Footer />
+    </>
+  );
+};
+
+export default App;
 
